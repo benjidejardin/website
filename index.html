@@ -91,7 +91,70 @@
     margin-top:10px;
     background:white;
   }
-</style>
+
+
+  .enveloppe { padding: 0; }
+
+  .carte{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:10px;
+    padding:14px 16px;
+    margin:14px 0;
+  }
+
+  .article h3{
+    margin:0 0 8px;
+    font-size: 1.05em;
+    color:#003366;
+  }
+
+  .reference p{
+    margin:0 0 10px;
+    color:#444;
+    font-size:0.95em;
+  }
+
+  /* The visible “glimpse” */
+  .contenu{
+    position: relative;
+    overflow: hidden;
+    max-height: 7.5em; /* controls how much of the beginning you show */
+    transition: max-height 250ms ease;
+  }
+
+  /* Fade at the bottom when collapsed */
+  .contenu.is-collapsed::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:0;
+    height:3em;
+    background: linear-gradient(to bottom, rgba(250,250,250,0), rgba(250,250,250,1));
+  }
+
+  /* Expanded state */
+  .contenu.is-expanded{
+    max-height: 2000px; /* big enough for expansion */
+  }
+  .contenu.is-expanded::after{ display:none; }
+
+  .pdf { margin-top: 10px; }
+  .pdf a{ font-weight: 600; }
+
+  .lienPlus{
+    display:inline-block;
+    margin-top:10px;
+    color:#003366;
+    font-weight:600;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.95em;
+  }
+  .lienPlus:hover{ text-decoration: underline; }
+
+
 
 </style>
 
@@ -155,45 +218,65 @@
       </p>
     </section>
 
-    <section id="policy-briefs" class="policy-briefs">
-      <h2>Policy briefs</h2>
-      <p>PDF versions of selected policy briefs (DULBEA). Click “Preview” to see the beginning (first page).</p>
-    
-      <div class="brief-card">
-        <p class="brief-title">
-          📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2025/12/Dulbea_PolicyBrief_25.03-1.pdf" target="_blank" rel="noopener noreferrer">
-            Evaluation d’une expérimentation menée au Forem : impact d’informations additionnelles sur les métiers en pénurie et formations
-          </a>
-          <span class="badge">2025</span>
-        </p>
-    
-        <details class="brief-preview">
-          <summary>Preview (first page)</summary>
-          <iframe class="brief-frame" loading="lazy"
-            src="https://dulbea.ulb.be/wp-content/uploads/2025/12/Dulbea_PolicyBrief_25.03-1.pdf#page=1&view=FitH">
-          </iframe>
-        </details>
-      </div>
-    
-      <div class="brief-card">
-        <p class="brief-title">
-          📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2025/06/Dulbea_PolicyBrief_25.02-1.pdf" target="_blank" rel="noopener noreferrer">
-            Assistance à la recherche d’emploi pour les étudiants en formation professionnelle : Evaluation de l’expérimentation AvenirPro
-          </a>
-          <span class="badge">2025</span>
-        </p>
-    
-        <details class="brief-preview">
-          <summary>Preview (first page)</summary>
-          <iframe class="brief-frame" loading="lazy"
-            src="https://dulbea.ulb.be/wp-content/uploads/2025/06/Dulbea_PolicyBrief_25.02-1.pdf#page=1&view=FitH">
-          </iframe>
-        </details>
-      </div>
-    
-      <!-- Repeat for the other briefs -->
-    </section>
-    
+<section id="policy-briefs" class="policy-briefs">
+  <h2>Policy briefs</h2>
+
+  <ul>
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2025/12/Dulbea_PolicyBrief_25.03-1.pdf" target="_blank" rel="noopener noreferrer">
+      Evaluation d’une expérimentation menée au Forem : impact d’informations additionnelles sur les métiers en pénurie et formations
+    </a> <span class="badge">2025</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2025/06/Dulbea_PolicyBrief_25.02-1.pdf" target="_blank" rel="noopener noreferrer">
+      Assistance à la recherche d’emploi pour les étudiants en formation professionnelle : Evaluation de l’expérimentation AvenirPro
+    </a> <span class="badge">2025</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2025/05/Dulbea_PolicyBrief_25.01-2.pdf" target="_blank" rel="noopener noreferrer">
+      Barrières à l’entrée en formations des chercheurs d’emploi : Le rôle des croyances
+    </a> <span class="badge">2025</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2024/12/Dulbea_PolicyBrief_24.06.pdf" target="_blank" rel="noopener noreferrer">
+      Recherche empirique sur l’effet du conseil sur la durée du chômage
+    </a> <span class="badge">2024</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2024/07/Dulbea_PolicyBrief_24.04.pdf" target="_blank" rel="noopener noreferrer">
+      Quels sont les effets des recommandations automatisées et personnalisées pour la recherche d’emploi des chômeurs de longue durée ?
+    </a> <span class="badge">2024</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2024/05/Dulbea_PolicyBrief_24.03.pdf" target="_blank" rel="noopener noreferrer">
+      Les PAMT s’adressant aux entreprises sont-elles efficaces ? Résultats d’une évaluation randomisée conduite avec des agences locales pour l’emploi en France
+    </a> <span class="badge">2024</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2023/12/Dulbea_PolicyBrief_23.10.pdf" target="_blank" rel="noopener noreferrer">
+      Comment l’IA peut améliorer la recherche d’emploi ?
+    </a> <span class="badge">2023</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2022/12/Dulbea_PolicyBrief_22.07-1.pdf" target="_blank" rel="noopener noreferrer">
+      Chômage des personnes âgées et offre de travail : Une application à la Belgique
+    </a> <span class="badge">2022</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2022/10/Dulbea_PolicyBrief_22.06-1.pdf" target="_blank" rel="noopener noreferrer">
+      Les Effets d’un Programme de Soutien à l’Emploi pour les Bénéficiaires de l’Assurance Maladie-Invalidité souffrant de Troubles Mentaux
+    </a> <span class="badge">2022</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2022/07/Dulbea_PolicyBrief_22.05-1.pdf" target="_blank" rel="noopener noreferrer">
+      L’ancienneté des employés et la productivité des firmes : nouvelles preuves de données longitudinales appariant des employeurs et des employés
+    </a> <span class="badge">2022</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2021/11/Dulbea_PolicyBrief_21.10-1.pdf" target="_blank" rel="noopener noreferrer">
+      The effects of trade-induced worker displacement on health and mortality in Mexico
+    </a> <span class="badge">2021</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2021/06/Dulbea_PolicyBrief_21.07.pdf" target="_blank" rel="noopener noreferrer">
+      Les conséquences inattendues de la supervision de la recherche d’emploi : invalidité au lieu d’emploi ?
+    </a> <span class="badge">2021</span></li>
+
+    <li>📄 <a href="https://dulbea.ulb.be/wp-content/uploads/2021/04/Dulbea_PolicyBrief_21.06.pdf" target="_blank" rel="noopener noreferrer">
+      Effet de l’endettement des ménages sur leur consommation : étude empirique microéconomique basée sur les données belges HFCS
+    </a> <span class="badge">2021</span></li>
+  </ul>
+</section>
+
+
 
 
     <section id="contact" class="contact">
@@ -218,6 +301,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
